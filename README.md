@@ -69,6 +69,8 @@ object with the following properties:
 ]
 ```
 
+## [Current Centralized Bookmark Bar JSON File](bookmarks.json)
+
 - The `iconUrl` can be any valid image URL (local or remote). If omitted, the extension will use its bundled icon.
 - The `url` property is optional, but recommended if you want bookmarks to be clickable (requires click handler in the extension).
 

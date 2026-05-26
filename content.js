@@ -2,6 +2,16 @@ console.log('Sample Browser Extension content.js loaded');
 
 
 (function () {
+  // console.log('[ext-bookmark-bar] content.js script running.');
+  // Log page and viewport heights to debug scrollability
+  const docHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+  const winHeight = window.innerHeight;
+  // console.log(`[ext-bookmark-bar] document height: ${docHeight}, window.innerHeight: ${winHeight}`);
+  // Log overflow CSS properties
+  const htmlOverflow = window.getComputedStyle(document.documentElement).overflow;
+  const bodyOverflow = window.getComputedStyle(document.body).overflow;
+  // console.log(`[ext-bookmark-bar] html overflow: ${htmlOverflow}, body overflow: ${bodyOverflow}`);
+  // Removed dummy div for scroll testing
   // Only show bar if on allowed network/domain
   const allowedHostPatterns = [
     /^192\.168\.100\./, // local network
@@ -55,6 +65,30 @@ console.log('Sample Browser Extension content.js loaded');
         document.body.prepend(bar);
         // Set background image after element is in DOM
         bar.style.backgroundImage = `url('${bgUrl}')`;
+
+        console.log('[ext-bookmark-bar] Attaching scroll event listener to window.');
+
+        // Hide bar on scroll down, show on scroll top
+        function handleScrollEvent(source) {
+          return function () {
+            // console.log(`[ext-bookmark-bar] Scroll event triggered on ${source}. window.scrollY:`, window.scrollY, 'body.scrollTop:', document.body.scrollTop, 'docEl.scrollTop:', document.documentElement.scrollTop);
+            if (window.scrollY > 0 || document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+              if (bar.style.display !== 'none') {
+                // console.log('[ext-bookmark-bar] Hiding bar');
+              }
+              bar.style.display = 'none';
+            } else {
+              if (bar.style.display === 'none') {
+                // console.log('[ext-bookmark-bar] Showing bar');
+              }
+              bar.style.display = '';
+            }
+          }
+        }
+
+        window.addEventListener('scroll', handleScrollEvent('window'));
+        document.addEventListener('scroll', handleScrollEvent('document'));
+        document.body.addEventListener('scroll', handleScrollEvent('body'));
       })
       .catch(e => {
         console.error('Could not load bookmarks:', e);
@@ -63,12 +97,14 @@ console.log('Sample Browser Extension content.js loaded');
   // Inject CSS
   const style = document.createElement('style');
   style.textContent = `
+
 #ext-bookmark-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
   background: #e3e3e3;
   background-image: url("icons/bluefish-aquarium_background-25px.jpg");
+  background-repeat: no-repeat;
   min-height: 20px;
   width: 100vw;
   box-sizing: border-box;
