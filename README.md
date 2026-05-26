@@ -31,6 +31,8 @@ Follow these steps to install the extension in Chrome:
 
 ## **Central Bookmarks Server Setup**
 
+**http://bookmarks.applebaum.treehouse/bookmarks.json**
+
 ### bookmarks.json Format
 
 The `bookmarks.json` file should be hosted at `http://bookmarks.applebaum.treehouse/bookmarks.json` and must be a valid JSON array. Each element in the array represents a bookmark and should be an
@@ -50,9 +52,14 @@ object with the following properties:
     "url": "https://intranet.applebaum.treehouse/profile/james"
   },
   {
-    "label": "YouTube",
-    "iconUrl": "https://www.youtube.com/s/desktop/6e8e6e8e/img/favicon_32x32.png",
-    "url": "https://youtube.com"
+    "type": "dropdown",
+    "label": "Quick Links",
+    "iconUrl": "http://bookmarks.applebaum.treehouse/icons/quicklinks.png",
+    "options": [
+      { "label": "YouTube", "value": "https://youtube.com" },
+      { "label": "GitHub", "value": "https://github.com" },
+      { "label": "Docs", "value": "https://docs.applebaum.treehouse" }
+    ]
   },
   {
     "label": "GitHub",
@@ -72,3 +79,38 @@ object with the following properties:
     - Hostnames ending with `applebaum.treehouse`
 - Make sure your server at `bookmarks.applebaum.treehouse` is accessible from your local network.
 - The JSON file must be valid and served with the correct MIME type (`application/json`).
+
+## Dropdown List Example
+
+To create a dropdown in the bookmark bar, add an object with `type: "dropdown"` and an `options` array. Each option should have a `label` and a `value`.
+
+### Example bookmarks.json with Dropdown
+
+```json
+[
+  {
+    "label": "james",
+    "iconUrl": "http://bookmarks.applebaum.treehouse/icons/james.png",
+    "url": "https://intranet.applebaum.treehouse/profile/james"
+  },
+  {
+    "type": "dropdown",
+    "label": "Quick Links",
+    "iconUrl": "http://bookmarks.applebaum.treehouse/icons/quicklinks.png",
+    "options": [
+      { "label": "YouTube", "value": "https://youtube.com" },
+      { "label": "GitHub", "value": "https://github.com" },
+      { "label": "Docs", "value": "https://docs.applebaum.treehouse" }
+    ]
+  },
+  {
+    "label": "GitHub",
+    "iconUrl": "https://github.githubassets.com/favicons/favicon.svg",
+    "url": "https://github.com"
+  }
+]
+```
+
+- The dropdown will appear as a select list with the provided options.
+- You can mix normal bookmarks and dropdowns in the same JSON array.
+- You may add click/change handling in the extension to open the selected link when a dropdown option is chosen.

@@ -1,0 +1,11 @@
+# Ignore JetBrains IDE project files
+.idea/
+
+# Ignore Photoshop files
+*.psd
+
+# Other common ignores
+.DS_Store
+node_modules/
+*.log
+/certs/

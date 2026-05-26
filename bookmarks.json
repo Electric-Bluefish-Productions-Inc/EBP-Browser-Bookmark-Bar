@@ -1,0 +1,31 @@
+[
+  {
+    "label": "james",
+    "iconUrl": "http://bookmarks.applebaum.treehouse/icons/james.png",
+    "url": "https://intranet.applebaum.treehouse/profile/james"
+  },
+  {
+    "type": "dropdown",
+    "label": "Quick Links",
+    "iconUrl": "http://bookmarks.applebaum.treehouse/icons/quicklinks.png",
+    "options": [
+      {
+        "label": "YouTube",
+        "value": "https://youtube.com"
+      },
+      {
+        "label": "GitHub",
+        "value": "https://github.com"
+      },
+      {
+        "label": "Docs",
+        "value": "https://docs.applebaum.treehouse"
+      }
+    ]
+  },
+  {
+    "label": "GitHub",
+    "iconUrl": "https://github.githubassets.com/favicons/favicon.svg",
+    "url": "https://github.com"
+  }
+]
