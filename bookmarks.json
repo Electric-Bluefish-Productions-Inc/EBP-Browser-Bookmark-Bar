@@ -2,7 +2,7 @@
   {
     "label": "james1",
     "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/fileshare@16x.png",
-    "url": "https://bluefishclient.avalonbloom.com"
+    "url": "https://bluefishclients.avalonbloom.com/"
   },
   {
     "type": "dropdown",
@@ -24,8 +24,22 @@
     ]
   },
   {
-    "label": "GitHub",
-    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@16x.png",
-    "url": "https://github.com"
+    "type": "dropdown",
+    "label": "Dev Links",
+    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/management@16x.png",
+    "options": [
+      {
+        "label": "YouTube",
+        "value": "https://youtube.com"
+      },
+      {
+        "label": "GitHub",
+        "value": "https://github.com/Electric-Bluefish-Productions-Inc"
+      },
+      {
+        "label": "Docs",
+        "value": "https://docs.applebaum.treehouse"
+      }
+    ]
   }
 ]
