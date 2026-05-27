@@ -68,19 +68,23 @@
       },
       {
         "label": "Host Server Redhat Management Interface",
-        "value": "https://cockpit.applebaum.treehouse/"
+        "value": "https://cockpit.applebaum.treehouse/",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/tech_support@32x.png"
       },
       {
-        "label": "Host Server Proxy Management Interface",
-        "value": "https://proxy.applebaum.treehouse/"
-      },
-      {
-        "label": "Host Server Netdata Performance Monitoring Interface",
-        "value": "http://netdata.applebaum.treehouse/"
+        "label": "Proxy Management Interface",
+        "value": "https://proxy.applebaum.treehouse/",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/tech_support@32x.png"
       },
       {
         "label": "Docker Portainer Management Interface",
-        "value": "https://portainer.applebaum.treehouse/"
+        "value": "https://portainer.applebaum.treehouse/",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/tech_support@32x.png"
+      },
+      {
+        "label": "Host Server Netdata Performance Monitoring Interface",
+        "value": "http://netdata.applebaum.treehouse/",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/tech_support@32x.png"
       },
       {
         "label": "bookmarks.json",
