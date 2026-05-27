@@ -1,13 +1,13 @@
 [
   {
     "label": "james1",
-    "iconUrl": "/icons/fileshare@16x.png",
+    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/fileshare@16x.png",
     "url": "https://bluefishclient.avalonbloom.com"
   },
   {
     "type": "dropdown",
     "label": "Quick Links",
-    "iconUrl": "/EBP-Browser-Bookmark-Bar/icons/link@16x.png",
+    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/link@16x.png",
     "options": [
       {
         "label": "YouTube",
@@ -25,7 +25,7 @@
   },
   {
     "label": "GitHub",
-    "iconUrl": "/EBP-Browser-Bookmark-Bar/icons/git@16x.png",
+    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@16x.png",
     "url": "https://github.com"
   }
 ]
