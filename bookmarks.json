@@ -6,7 +6,7 @@
   },
   {
     "type": "dropdown",
-    "label": "Developers",
+    "label": "Developer Resources",
     "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/management@16x.png",
     "options": [
       {
@@ -19,19 +19,43 @@
         "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@16x.png"
       },
       {
-        "label": "Server Functional Documentation",
+        "label": "CNC Camera",
+        "value": "http://lasercam.applebaum.treehouse/"
+      },
+      {
+        "label": "Host Server Functional Documentation",
         "value": "https://github.com/Electric-Bluefish-Productions-Inc/Treehouse-Server-functional-cheats",
         "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@16x.png"
       },
       {
-        "label": "Server Custom Scripts",
+        "label": "Host Server Custom Scripts",
         "value": "https://github.com/Electric-Bluefish-Productions-Inc/Treehouse-Server-Root-scripts",
         "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@16x.png"
       },
       {
-        "label": "Default Website",
+        "label": "Host Server Default Website",
         "value": "https://github.com/Electric-Bluefish-Productions-Inc/Treehouse-Default-Webserver",
         "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@16x.png"
+      },
+      {
+        "label": "Host Server Redhat Management Interface",
+        "value": "https://cockpit.applebaum.treehouse/"
+      },
+      {
+        "label": "Host Server Proxy Management Interface",
+        "value": "https://proxy.applebaum.treehouse/"
+      },
+      {
+        "label": "Host Server Netdata Performance Monitoring Interface",
+        "value": "http://netdata.applebaum.treehouse/"
+      },
+      {
+        "label": "Docker Portainer Management Interface",
+        "value": "https://portainer.applebaum.treehouse/"
+      },
+      {
+        "label": "bookmarks.json",
+        "value": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/bookmarks.json"
       }
     ]
   }
