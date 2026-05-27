@@ -116,3 +116,26 @@ To create a dropdown in the bookmark bar, add an object with `type: "dropdown"` 
 - The dropdown will appear as a select list with the provided options.
 - You can mix normal bookmarks and dropdowns in the same JSON array.
 - You may add click/change handling in the extension to open the selected link when a dropdown option is chosen.
+
+## Firefox Compatibility
+
+To support Firefox, add browser-polyfill.js as a web accessible resource and include it in your content scripts.
+
+- Download from: https://github.com/mozilla/webextension-polyfill
+- Use the file: dist/browser-polyfill.js
+- Place browser-polyfill.js in your extension directory (same level as manifest.json).
+- Add to manifest.json:
+    - "web_accessible_resources": [
+      ...existing resources...,
+      "browser-polyfill.js"
+      ]
+      ...
+      "content_scripts": [
+      {
+      ...existing fields...,
+      "js": ["browser-polyfill.js", "content.js"]
+      }
+      ]
+-
+
+This ensures browser.* API is available in all browsers.

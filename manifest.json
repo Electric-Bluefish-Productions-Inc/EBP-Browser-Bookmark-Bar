@@ -31,7 +31,8 @@
         "icons/network@16x.png",
         "icons/store@16x.png",
         "icons/tech_support@16x.png",
-        "icons/video@16x.png"
+        "icons/video@16x.png",
+        "browser-polyfill.js"
       ],
       "matches": [
         "<all_urls>"
@@ -48,6 +49,7 @@
         "<all_urls>"
       ],
       "js": [
+        "browser-polyfill.js",
         "content.js"
       ],
       "run_at": "document_end"

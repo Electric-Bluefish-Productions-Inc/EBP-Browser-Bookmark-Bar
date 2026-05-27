@@ -28,9 +28,12 @@ console.log('Sample Browser Extension content.js loaded');
   const bar = document.createElement('div');
   bar.id = 'ext-bookmark-bar';
 
+  // Polyfill for browser.* API (for Firefox compatibility)
+  const ext = (typeof browser !== 'undefined') ? browser : chrome;
+
   // Resolve image URLs
-  const logoUrl = chrome.runtime.getURL('icons/logo16.png');
-  const bgUrl = chrome.runtime.getURL('icons/bluefish-aquarium_background-25px.jpg');
+  const logoUrl = ext.runtime.getURL('icons/logo16.png');
+  const bgUrl = ext.runtime.getURL('icons/bluefish-aquarium_background-25px.jpg');
 
   // Fetch bookmarks from central server
   fetch('https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/bookmarks.json')
