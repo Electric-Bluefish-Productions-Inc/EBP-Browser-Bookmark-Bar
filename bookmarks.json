@@ -27,13 +27,13 @@
       },
       {
         "label": "Messaging",
-        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/clipboard@32x.png",
-        "url": "https://message.applebaum.treehouse"
+        "value": "https://message.applebaum.treehouse"
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/clipboard@32x.png"
       },
       {
         "label": "External File Share",
-        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/fileshare@32x.png",
-        "url": "https://bluefishclients.avalonbloom.com/"
+        "value": "https://bluefishclients.avalonbloom.com/"
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/fileshare@32x.png"
       }
     ]
   },
