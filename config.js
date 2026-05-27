@@ -27,7 +27,11 @@
 // ========================================================
 
 window.CONFIG = {
-    allowedHostPatterns: [/.*/],
+    // List of regular expressions. The bar will NOT appear on hostnames matching these patterns.
+    excludedHostPatterns: [
+        /^laser\.applebaum\.treehouse$/
+    ],
+
     bookmarksUrl: 'https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/bookmarks.json',
     logoPath: 'icons/logo32.png',
     bgPath: 'icons/bluefish-aquarium_background-25px.jpg',

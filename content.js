@@ -23,7 +23,8 @@ class BookmarkBar {
 
     isAllowedHost() {
         const hostname = window.location.hostname;
-        return this.allowedHostPatterns.some(pattern => pattern.test(hostname));
+        // Exclude if any pattern matches
+        return !CONFIG.excludedHostPatterns.some(pattern => pattern.test(hostname));
     }
 
     async init() {
