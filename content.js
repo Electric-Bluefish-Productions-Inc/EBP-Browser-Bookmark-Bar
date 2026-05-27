@@ -190,7 +190,6 @@ class BookmarkBar {
   flex-direction: row;
   align-items: center;
   background: #e3e3e3;
-  background-image: url("https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/bluefish-aquarium_background-25px.jpg");
   background-repeat: no-repeat;
   min-height: 25px;
   width: 100vw;
