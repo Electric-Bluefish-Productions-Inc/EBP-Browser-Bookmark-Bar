@@ -1,13 +1,13 @@
 [
   {
     "label": "james",
-    "iconUrl": "http://bookmarks.applebaum.treehouse/icons/james.png",
+    "iconUrl": "/icons/fileshare@16x.png",
     "url": "https://intranet.applebaum.treehouse/profile/james"
   },
   {
     "type": "dropdown",
     "label": "Quick Links",
-    "iconUrl": "http://bookmarks.applebaum.treehouse/icons/quicklinks.png",
+    "iconUrl": "/icons/link@16x.png",
     "options": [
       {
         "label": "YouTube",
@@ -25,7 +25,7 @@
   },
   {
     "label": "GitHub",
-    "iconUrl": "https://github.githubassets.com/favicons/favicon.svg",
+    "iconUrl": "/icons/git@16x.png",
     "url": "https://github.com"
   }
 ]
