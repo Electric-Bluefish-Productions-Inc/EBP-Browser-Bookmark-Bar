@@ -91,7 +91,7 @@
         "value": "https://github.com/Electric-Bluefish-Productions-Inc/CNC-control-pendent-Kiosk-Mode-for-Surface-Pro3"
       },
       {
-        "label": "Chrome Extension",
+        "label": "Chrome Extension = chrome://extensions/",
         "value": "chrome://extensions/",
         "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/tech_support@32x.png"
       },
