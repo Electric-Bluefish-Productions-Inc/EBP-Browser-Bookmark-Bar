@@ -87,12 +87,18 @@
         "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/tech_support@32x.png"
       },
       {
-        "label": "bookmarks.json",
-        "value": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/bookmarks.json"
-      },
-      {
         "label": "Surface Pro 3 CNC Control Pendent Kiosk Mode",
         "value": "https://github.com/Electric-Bluefish-Productions-Inc/CNC-control-pendent-Kiosk-Mode-for-Surface-Pro3"
+      },
+      {
+        "label": "Chrome Extension",
+        "value": "chrome://extensions/",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/tech_support@32x.png"
+      },
+      {
+        "label": "Extension Bookmarks",
+        "value": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/bookmarks.json",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@32x.png"
       }
     ]
   }
