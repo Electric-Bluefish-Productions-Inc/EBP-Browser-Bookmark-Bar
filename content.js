@@ -108,6 +108,40 @@ class BookmarkBar {
       `;
                 }
             }).join('');
+
+        // Add the hide bar checkbox to the far right
+        const hostname = window.location.hostname;
+        const isHidden = this.hasHideBarCookie(hostname);
+        const hideBarDiv = document.createElement('div');
+        hideBarDiv.className = 'bookmark-item hide-bar-checkbox';
+        hideBarDiv.style.marginLeft = 'auto';
+        hideBarDiv.style.display = 'flex';
+        hideBarDiv.style.alignItems = 'center';
+        hideBarDiv.style.paddingRight = '16px';
+        hideBarDiv.innerHTML = `
+            <label style="display:flex;align-items:center;cursor:pointer;font-size:12px;">
+                <input type="checkbox" id="hide-bar-checkbox" ${isHidden ? 'checked' : ''} style="margin-right:4px;">
+                Hide for Site
+            </label>
+        `;
+        this.bar.appendChild(hideBarDiv);
+        // Hide the bar if the cookie is set
+        if (isHidden) {
+            this.bar.style.display = 'none';
+        }
+        // Add event listener to the checkbox
+        const checkbox = hideBarDiv.querySelector('#hide-bar-checkbox');
+        if (checkbox) {
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                    this.setHideBarCookie(hostname);
+                    this.bar.style.display = 'none';
+                } else {
+                    this.removeHideBarCookie(hostname);
+                    this.bar.style.display = '';
+                }
+            });
+        }
     }
 
     addDropdownListeners() {
@@ -311,8 +345,36 @@ border-radius: 4px;
   color: #000;
   white-space: nowrap;
 }
+.hide-bar-checkbox {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding-right: 16px;
+}
+.hide-bar-checkbox label {
+  font-size: 8px !important;
+  padding-right: 2px;
+  color:#FFF;
+  cursor: pointer;
+}
+.hide-bar-checkbox input[type="checkbox"] {
+  margin-right: 4px;
+}
 `;
         document.head.appendChild(style);
+    }
+
+    // Utility: Cookie helpers for bar visibility
+    setHideBarCookie(hostname) {
+        document.cookie = `hideBookmarkBar_${hostname}=1; path=/; max-age=31536000`;
+    }
+
+    removeHideBarCookie(hostname) {
+        document.cookie = `hideBookmarkBar_${hostname}=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+    }
+
+    hasHideBarCookie(hostname) {
+        return document.cookie.split(';').some(c => c.trim().startsWith(`hideBookmarkBar_${hostname}=`));
     }
 }
 
