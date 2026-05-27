@@ -1,8 +1,8 @@
 # Centralized Bookmark Bar Chrome Extension
 
-This browser extension injects a customizable bookmark bar into web pages, displaying bookmarks fetched from a central server (http://bookmarks.applebaum.treehouse/bookmarks.json). The bar is only
-visible on specified local networks or domains (e.g., 192.168.100.*, 10.0.100.*, or *.applebaum.treehouse). Bookmarks and their icons are managed centrally, making updates seamless for all users on
-the network.
+This browser extension injects a customizable bookmark bar into web pages, displaying bookmarks fetched from a central server (http://bookmarks.applebaum.treehouse/bookmarks.json). The bar can be
+excluded from certain networks/domains via the config.js file.
+The bar contains a checkbox to toggle the visibility of the bookmarks that has a persistant cookie.
 
 ![samplebar.jpg](images/samplebar.jpg)
 ## Browser Extention - Installation Instructions
