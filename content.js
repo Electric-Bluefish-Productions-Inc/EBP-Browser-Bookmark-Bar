@@ -33,7 +33,7 @@ console.log('Sample Browser Extension content.js loaded');
   const bgUrl = chrome.runtime.getURL('icons/bluefish-aquarium_background-25px.jpg');
 
   // Fetch bookmarks from central server
-  fetch('https://bookmarks.applebaum.treehouse/bookmarks.json')
+  fetch('https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/bookmarks.json')
       .then(r => {
         if (!r.ok) throw new Error('Failed to fetch bookmarks');
         return r.json();
@@ -41,12 +41,17 @@ console.log('Sample Browser Extension content.js loaded');
       .then(bookmarks => {
         // bookmarks can be normal or dropdown
         bar.innerHTML = bookmarks.map(item => {
+          // Always use local logo16.png if no icon is specified or if iconUrl is empty/invalid
+          let iconSrc = logoUrl;
+          if (item.iconUrl && typeof item.iconUrl === 'string' && item.iconUrl.trim() !== '') {
+            iconSrc = item.iconUrl;
+          }
           if (item.type === 'dropdown' && Array.isArray(item.options)) {
             // Render dropdown
             const optionsHtml = item.options.map(opt => `<option value="${opt.value}">${opt.label}</option>`).join('');
             return `
             <div class="bookmark-item">
-              <img src="${item.iconUrl || logoUrl}" class="bookmark-icon" alt="Icon">
+              <img src="${iconSrc}" class="bookmark-icon" alt="Icon">
               <select class="bookmark-dropdown">
                 ${optionsHtml}
               </select>
@@ -56,7 +61,7 @@ console.log('Sample Browser Extension content.js loaded');
             // Render normal bookmark
             return `
             <div class="bookmark-item">
-              <img src="${item.iconUrl || logoUrl}" class="bookmark-icon" alt="Icon">
+              <img src="${iconSrc}" class="bookmark-icon" alt="Icon">
               <span class="bookmark-label">${item.label}</span>
             </div>
           `;
@@ -103,7 +108,7 @@ console.log('Sample Browser Extension content.js loaded');
   flex-direction: row;
   align-items: center;
   background: #e3e3e3;
-  background-image: url("icons/bluefish-aquarium_background-25px.jpg");
+  background-image: url("https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/bluefish-aquarium_background-25px.jpg");
   background-repeat: no-repeat;
   min-height: 20px;
   width: 100vw;

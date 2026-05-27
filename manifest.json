@@ -4,7 +4,6 @@
   "version": "1.0",
   "description": "A basic browser extension framework using HTML, CSS, and JavaScript.",
   "action": {
-    //    "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/logo16.png",
       "32": "icons/logo32.png",
@@ -16,7 +15,23 @@
     {
       "resources": [
         "icons/logo16.png",
-        "icons/bluefish-aquarium_background-25px.jpg"
+        "icons/bluefish-aquarium_background-25px.jpg",
+        "icons/calendar@16x.png",
+        "icons/clipboard@16x.png",
+        "icons/creative@16x.png",
+        "icons/customers@16x.png",
+        "icons/email@16x.png",
+        "icons/fileshare@16x.png",
+        "icons/git@16x.png",
+        "icons/info@16x.png",
+        "icons/lightbulb@16x.png",
+        "icons/link@16x.png",
+        "icons/management@16x.png",
+        "icons/menu@16x.png",
+        "icons/network@16x.png",
+        "icons/store@16x.png",
+        "icons/tech_support@16x.png",
+        "icons/video@16x.png"
       ],
       "matches": [
         "<all_urls>"
@@ -27,12 +42,6 @@
     "service_worker": "background.js"
   },
   "permissions": [],
-  "icons": {
-    "16": "icons/logo16.png",
-    "32": "icons/logo32.png",
-    "48": "icons/logo48.png",
-    "128": "icons/logo128.png"
-  },
   "content_scripts": [
     {
       "matches": [

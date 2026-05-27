@@ -3,7 +3,8 @@
 
 # Ignore Photoshop files
 *.psd
-
+*.eps
+*.ai
 # Other common ignores
 .DS_Store
 node_modules/
