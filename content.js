@@ -366,7 +366,7 @@ border-radius: 4px;
 
     // Utility: Cookie helpers for bar visibility
     setHideBarCookie(hostname) {
-        document.cookie = `hideBookmarkBar_${hostname}=1; path=/; max-age=31536000`;
+        document.cookie = `hideBookmarkBar_${hostname}=1; path=/; max-age=2592000`;
     }
 
     removeHideBarCookie(hostname) {
