@@ -13,12 +13,8 @@
 
 class BookmarkBar {
     constructor() {
-        this.allowedHostPatterns = [/^192\.168\.100\./, // local network
-            /^10\.0\.100\./,    // VPN
-            /applebaum\.treehouse$/, // domain
-            /avalonbloom\.com$/, // domain
-            /electricbluefish\.com$/ // domain
-        ];
+        // Allow all hosts
+        this.allowedHostPatterns = [/.*/];
         this.ext = (typeof browser !== 'undefined') ? browser : chrome;
         this.logoUrl = this.ext.runtime.getURL('icons/logo16.png');
         this.bgUrl = this.ext.runtime.getURL('icons/bluefish-aquarium_background-25px.jpg');
@@ -138,12 +134,33 @@ class BookmarkBar {
 
     addScrollListeners() {
         const bar = this.bar;
+        let hideTimeout = null;
+        let isHidden = false;
+
+        function showBar() {
+            if (hideTimeout) {
+                clearTimeout(hideTimeout);
+                hideTimeout = null;
+            }
+            bar.classList.remove('ext-bookmark-bar-hidden');
+            bar.classList.add('ext-bookmark-bar-visible');
+            isHidden = false;
+        }
+
+        function hideBarDelayed() {
+            if (hideTimeout) clearTimeout(hideTimeout);
+            hideTimeout = setTimeout(() => {
+                bar.classList.remove('ext-bookmark-bar-visible');
+                bar.classList.add('ext-bookmark-bar-hidden');
+                isHidden = true;
+            }, 2000);
+        }
 
         function handleScrollEvent() {
             if (window.scrollY > 0 || document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-                bar.style.display = 'none';
+                hideBarDelayed();
             } else {
-                bar.style.display = '';
+                showBar();
             }
         }
 
@@ -158,19 +175,32 @@ class BookmarkBar {
 #ext-bookmark-bar {
   font-size: 10px;
   font-family: "Arial", sans-serif;
-  color: #222;
+  color: #000;
   display: flex;
   flex-direction: row;
   align-items: center;
   background: #e3e3e3;
   background-image: url("https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/bluefish-aquarium_background-25px.jpg");
   background-repeat: no-repeat;
-  min-height: 20px;
+  min-height: 25px;
   width: 100vw;
   box-sizing: border-box;
-  padding: 3px 0px;
+  padding: 0px;
   z-index: 999999;
   position: relative;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+#ext-bookmark-bar.ext-bookmark-bar-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+#ext-bookmark-bar.ext-bookmark-bar-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 .bookmark-item {
   display: flex;
@@ -181,6 +211,7 @@ class BookmarkBar {
 }
 #ext-bookmark-bar > div > a{
   text-decoration: none;
+  color: #000;
 }
 #ext-bookmark-bar .bookmark-item:first-child {
   margin-left: 145px;
@@ -218,7 +249,7 @@ class BookmarkBar {
 }
 .custom-dropdown-selected::after {
   content: '▼'; /* ▼ and your text */
-  color: #888;
+  color: #000;
   margin-left: 8px;
   display: inline-block;
 }
