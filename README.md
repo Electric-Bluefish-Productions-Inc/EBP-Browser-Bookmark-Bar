@@ -97,18 +97,25 @@ To create a dropdown in the bookmark bar, add an object with `type: "dropdown"` 
   },
   {
     "type": "dropdown",
-    "label": "Quick Links",
-    "iconUrl": "http://bookmarks.applebaum.treehouse/icons/quicklinks.png",
+    "label": "Dev Links",
+    "iconUrl": "http://bookmarks.applebaum.treehouse/icons/management.png",
     "options": [
-      { "label": "YouTube", "value": "https://youtube.com" },
-      { "label": "GitHub", "value": "https://github.com" },
-      { "label": "Docs", "value": "https://docs.applebaum.treehouse" }
+      {
+        "label": "YouTube",
+        "value": "https://youtube.com",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/video@16x.png"
+      },
+      {
+        "label": "GitHub",
+        "value": "https://github.com/Electric-Bluefish-Productions-Inc",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@16x.png"
+      },
+      {
+        "label": "Docs",
+        "value": "https://docs.applebaum.treehouse"
+        // No iconUrl: will use default icon
+      }
     ]
-  },
-  {
-    "label": "GitHub",
-    "iconUrl": "https://github.githubassets.com/favicons/favicon.svg",
-    "url": "https://github.com"
   }
 ]
 ```
@@ -119,23 +126,4 @@ To create a dropdown in the bookmark bar, add an object with `type: "dropdown"` 
 
 ## Firefox Compatibility
 
-To support Firefox, add browser-polyfill.js as a web accessible resource and include it in your content scripts.
-
-- Download from: https://github.com/mozilla/webextension-polyfill
-- Use the file: dist/browser-polyfill.js
-- Place browser-polyfill.js in your extension directory (same level as manifest.json).
-- Add to manifest.json:
-    - "web_accessible_resources": [
-      ...existing resources...,
-      "browser-polyfill.js"
-      ]
-      ...
-      "content_scripts": [
-      {
-      ...existing fields...,
-      "js": ["browser-polyfill.js", "content.js"]
-      }
-      ]
--
-
-This ensures browser.* API is available in all browsers.
+To support Firefox, we added browser-polyfill.js as a web accessible resource and included it in your content scripts.
