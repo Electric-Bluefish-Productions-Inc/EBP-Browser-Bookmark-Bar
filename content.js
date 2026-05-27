@@ -13,11 +13,10 @@
 
 class BookmarkBar {
     constructor() {
-        // Allow all hosts
-        this.allowedHostPatterns = [/.*/];
+        this.allowedHostPatterns = CONFIG.allowedHostPatterns;
         this.ext = (typeof browser !== 'undefined') ? browser : chrome;
-        this.logoUrl = this.ext.runtime.getURL('icons/logo16.png');
-        this.bgUrl = this.ext.runtime.getURL('icons/bluefish-aquarium_background-25px.jpg');
+        this.logoUrl = this.ext.runtime.getURL(CONFIG.logoPath);
+        this.bgUrl = this.ext.runtime.getURL(CONFIG.bgPath);
         this.bar = null;
         this.init();
     }
@@ -46,31 +45,42 @@ class BookmarkBar {
     }
 
     async fetchBookmarks() {
-        const r = await fetch('https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/bookmarks.json');
+        const r = await fetch(CONFIG.bookmarksUrl);
         if (!r.ok) throw new Error('Failed to fetch bookmarks');
         return r.json();
     }
 
     renderBar(bookmarks) {
-        this.bar.innerHTML = bookmarks.map(item => {
-            let iconSrc = this.logoUrl;
-            if (item.iconUrl && typeof item.iconUrl === 'string' && item.iconUrl.trim() !== '') {
-                iconSrc = item.iconUrl;
-            }
-            if (item.type === 'dropdown' && Array.isArray(item.options)) {
-                const optionsHtml = item.options.map(opt => {
-                    let optIcon = this.logoUrl;
-                    if (opt.iconUrl && typeof opt.iconUrl === 'string' && opt.iconUrl.trim() !== '') {
-                        optIcon = opt.iconUrl;
-                    }
-                    return `
+        // Home button HTML
+        const homeButton = `
+        <div class="bookmark-item home-button">
+            <a href="${CONFIG.homeUrl}" target="_blank" rel="noopener noreferrer">
+                <img src="${this.logoUrl}" class="bookmark-icon" alt="Home">
+            </a>
+        </div>
+        `;
+        // Render bookmarks as before
+        this.bar.innerHTML =
+            homeButton +
+            bookmarks.map(item => {
+                let iconSrc = this.logoUrl;
+                if (item.iconUrl && typeof item.iconUrl === 'string' && item.iconUrl.trim() !== '') {
+                    iconSrc = item.iconUrl;
+                }
+                if (item.type === 'dropdown' && Array.isArray(item.options)) {
+                    const optionsHtml = item.options.map(opt => {
+                        let optIcon = this.logoUrl;
+                        if (opt.iconUrl && typeof opt.iconUrl === 'string' && opt.iconUrl.trim() !== '') {
+                            optIcon = opt.iconUrl;
+                        }
+                        return `
             <div class="custom-dropdown-option" data-value="${opt.value}" tabindex="0">
               <img src="${optIcon}" class="dropdown-option-icon" alt="Icon">
               <span class="dropdown-option-label">${opt.label}</span>
             </div>
           `;
-                }).join('');
-                return `
+                    }).join('');
+                    return `
           <div class="bookmark-item custom-dropdown-container">
             <img src="${iconSrc}" class="bookmark-icon" alt="Icon">
             <div class="custom-dropdown">
@@ -81,22 +91,22 @@ class BookmarkBar {
             </div>
           </div>
         `;
-            } else if (item.url && typeof item.url === 'string' && item.url.trim() !== '') {
-                return `
+                } else if (item.url && typeof item.url === 'string' && item.url.trim() !== '') {
+                    return `
         <div class="bookmark-item">
           <img src="${iconSrc}" class="bookmark-icon" alt="Icon">
           <a class="bookmark-label" href="${item.url}" target="_blank" rel="noopener noreferrer">${item.label}</a>
         </div>
       `;
-            } else {
-                return `
+                } else {
+                    return `
         <div class="bookmark-item">
           <img src="${iconSrc}" class="bookmark-icon" alt="Icon">
           <span class="bookmark-label">${item.label}</span>
         </div>
       `;
-            }
-        }).join('');
+                }
+            }).join('');
     }
 
     addDropdownListeners() {
@@ -213,8 +223,23 @@ class BookmarkBar {
   text-decoration: none;
   color: #000;
 }
-#ext-bookmark-bar .bookmark-item:first-child {
-  margin-left: 145px;
+#ext-bookmark-bar > div.bookmark-item.home-button{
+background-color: #FFF;
+padding: 2px;
+margin-left: 80px;
+border: 1px solid #5046C8;
+border-radius: 4px;
+}
+#ext-bookmark-bar > div.bookmark-item.home-button img.bookmark-icon {
+  margin-right: 0;
+  margin-bottom: 0;
+  display: block;
+}
+#ext-bookmark-bar > div.bookmark-item.home-button > a{
+
+}
+#ext-bookmark-bar .bookmark-item:nth-child(2) {
+  margin-left: 70px;
 }
 .bookmark-item:last-child {
   margin-right: 0;
