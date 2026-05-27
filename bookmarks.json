@@ -1,44 +1,37 @@
 [
   {
-    "label": "james1",
+    "label": "Fileshare",
     "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/fileshare@16x.png",
     "url": "https://bluefishclients.avalonbloom.com/"
   },
   {
     "type": "dropdown",
-    "label": "Quick Links",
-    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/link@16x.png",
-    "options": [
-      {
-        "label": "YouTube",
-        "value": "https://youtube.com"
-      },
-      {
-        "label": "GitHub",
-        "value": "https://github.com"
-      },
-      {
-        "label": "Docs",
-        "value": "https://docs.applebaum.treehouse"
-      }
-    ]
-  },
-  {
-    "type": "dropdown",
-    "label": "Dev Links",
+    "label": "Developers",
     "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/management@16x.png",
     "options": [
       {
-        "label": "YouTube",
-        "value": "https://youtube.com"
+        "label": "Docker Hub",
+        "value": "https://hub.docker.com/repositories/electricbluefishproductions"
       },
       {
         "label": "GitHub",
-        "value": "https://github.com/Electric-Bluefish-Productions-Inc"
+        "value": "https://github.com/Electric-Bluefish-Productions-Inc",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@16x.png"
       },
       {
-        "label": "Docs",
-        "value": "https://docs.applebaum.treehouse"
+        "label": "Server Functional Documentation",
+        "value": "https://github.com/Electric-Bluefish-Productions-Inc/Treehouse-Server-functional-cheats",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@16x.png"
+      },
+      {
+        "label": "Server Custom Scripts",
+        "value": "https://github.com/Electric-Bluefish-Productions-Inc/Treehouse-Server-Root-scripts",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@16x.png"
+      },
+      {
+        "label": "Default Website",
+        "value": "https://github.com/Electric-Bluefish-Productions-Inc/Treehouse-Default-Webserver",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@16x.png"
       }
     ]
   }

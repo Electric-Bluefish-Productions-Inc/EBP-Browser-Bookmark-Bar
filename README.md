@@ -42,32 +42,6 @@ object with the following properties:
 - `iconUrl` (string, optional): The URL of the icon to display for this bookmark. If omitted, the extension's default icon will be used.
 - `url` (string, optional): The URL to open when the bookmark is clicked. (Note: You may want to add click handling in the extension if you want this feature.)
 
-### Example
-
-```json
-[
-  {
-    "label": "james",
-    "iconUrl": "http://bookmarks.applebaum.treehouse/icons/james.png",
-    "url": "https://intranet.applebaum.treehouse/profile/james"
-  },
-  {
-    "type": "dropdown",
-    "label": "Quick Links",
-    "iconUrl": "http://bookmarks.applebaum.treehouse/icons/quicklinks.png",
-    "options": [
-      { "label": "YouTube", "value": "https://youtube.com" },
-      { "label": "GitHub", "value": "https://github.com" },
-      { "label": "Docs", "value": "https://docs.applebaum.treehouse" }
-    ]
-  },
-  {
-    "label": "GitHub",
-    "iconUrl": "https://github.githubassets.com/favicons/favicon.svg",
-    "url": "https://github.com"
-  }
-]
-```
 
 ## [Current Centralized Bookmark Bar JSON File](bookmarks.json)
 
@@ -82,7 +56,7 @@ object with the following properties:
 - Make sure your server at `bookmarks.applebaum.treehouse` is accessible from your local network.
 - The JSON file must be valid and served with the correct MIME type (`application/json`).
 
-## Dropdown List Example
+## JSON List Example
 
 To create a dropdown in the bookmark bar, add an object with `type: "dropdown"` and an `options` array. Each option should have a `label` and a `value`.
 
