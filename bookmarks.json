@@ -1,31 +1,105 @@
 [
   {
-    "label": "james1",
-    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/fileshare@16x.png",
-    "url": "https://bluefishclient.avalonbloom.com"
+    "label": "Food Inventory",
+    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/menu@32x.png",
+    "url": "https://menu.avalonbloom.com/stockoverview"
   },
   {
     "type": "dropdown",
-    "label": "Quick Links",
-    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/link@16x.png",
+    "label": "Business Operations",
+    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/creative@32x.png",
     "options": [
       {
-        "label": "YouTube",
-        "value": "https://youtube.com"
+        "label": "CNC Table",
+        "value": "http://laser.applebaum.treehouse/"
       },
       {
-        "label": "GitHub",
-        "value": "https://github.com"
+        "label": "CNC MS Surface Pro 3 Pendent",
+        "value": "http://laser.applebaum.treehouse/tablet/"
       },
       {
-        "label": "Docs",
-        "value": "https://docs.applebaum.treehouse"
+        "label": "CNC Camera",
+        "value": "http://lasercam.applebaum.treehouse/"
+      },
+      {
+        "label": "CNC Scanner",
+        "value": "http://laserscanner.applebaum.treehouse/"
+      },
+      {
+        "label": "Messaging",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/clipboard@32x.png",
+        "url": "https://message.applebaum.treehouse/"
+      },
+      {
+        "label": "External File Share",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/fileshare@32x.png",
+        "url": "https://bluefishclients.avalonbloom.com/"
       }
     ]
   },
   {
-    "label": "GitHub",
-    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@16x.png",
-    "url": "https://github.com"
+    "type": "dropdown",
+    "label": "Developer Resources",
+    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/management@16x.png",
+    "options": [
+      {
+        "label": "Docker Hub",
+        "value": "https://hub.docker.com/repositories/electricbluefishproductions"
+      },
+      {
+        "label": "GitHub",
+        "value": "https://github.com/Electric-Bluefish-Productions-Inc",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@32x.png"
+      },
+      {
+        "label": "Host Server Functional Documentation",
+        "value": "https://github.com/Electric-Bluefish-Productions-Inc/Treehouse-Server-functional-cheats",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@32x.png"
+      },
+      {
+        "label": "Host Server Custom Scripts",
+        "value": "https://github.com/Electric-Bluefish-Productions-Inc/Treehouse-Server-Root-scripts",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@32x.png"
+      },
+      {
+        "label": "Host Server Default Website",
+        "value": "https://github.com/Electric-Bluefish-Productions-Inc/Treehouse-Default-Webserver",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@32x.png"
+      },
+      {
+        "label": "Host Server Redhat Management Interface",
+        "value": "https://cockpit.applebaum.treehouse/",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/tech_support@32x.png"
+      },
+      {
+        "label": "Proxy Management Interface",
+        "value": "https://proxy.applebaum.treehouse/",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/tech_support@32x.png"
+      },
+      {
+        "label": "Docker Portainer Management Interface",
+        "value": "https://portainer.applebaum.treehouse/",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/tech_support@32x.png"
+      },
+      {
+        "label": "Host Server Netdata Performance Monitoring Interface",
+        "value": "http://netdata.applebaum.treehouse/",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/tech_support@32x.png"
+      },
+      {
+        "label": "Surface Pro 3 CNC Control Pendent Kiosk Mode",
+        "value": "https://github.com/Electric-Bluefish-Productions-Inc/CNC-control-pendent-Kiosk-Mode-for-Surface-Pro3"
+      },
+      {
+        "label": "Chrome Extension = chrome://extensions/",
+        "value": "chrome://extensions/",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/tech_support@32x.png"
+      },
+      {
+        "label": "Extension Bookmarks",
+        "value": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/bookmarks.json",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@32x.png"
+      }
+    ]
   }
 ]

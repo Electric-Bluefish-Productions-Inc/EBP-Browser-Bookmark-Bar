@@ -42,32 +42,6 @@ object with the following properties:
 - `iconUrl` (string, optional): The URL of the icon to display for this bookmark. If omitted, the extension's default icon will be used.
 - `url` (string, optional): The URL to open when the bookmark is clicked. (Note: You may want to add click handling in the extension if you want this feature.)
 
-### Example
-
-```json
-[
-  {
-    "label": "james",
-    "iconUrl": "http://bookmarks.applebaum.treehouse/icons/james.png",
-    "url": "https://intranet.applebaum.treehouse/profile/james"
-  },
-  {
-    "type": "dropdown",
-    "label": "Quick Links",
-    "iconUrl": "http://bookmarks.applebaum.treehouse/icons/quicklinks.png",
-    "options": [
-      { "label": "YouTube", "value": "https://youtube.com" },
-      { "label": "GitHub", "value": "https://github.com" },
-      { "label": "Docs", "value": "https://docs.applebaum.treehouse" }
-    ]
-  },
-  {
-    "label": "GitHub",
-    "iconUrl": "https://github.githubassets.com/favicons/favicon.svg",
-    "url": "https://github.com"
-  }
-]
-```
 
 ## [Current Centralized Bookmark Bar JSON File](bookmarks.json)
 
@@ -82,7 +56,7 @@ object with the following properties:
 - Make sure your server at `bookmarks.applebaum.treehouse` is accessible from your local network.
 - The JSON file must be valid and served with the correct MIME type (`application/json`).
 
-## Dropdown List Example
+## JSON List Example
 
 To create a dropdown in the bookmark bar, add an object with `type: "dropdown"` and an `options` array. Each option should have a `label` and a `value`.
 
@@ -97,18 +71,25 @@ To create a dropdown in the bookmark bar, add an object with `type: "dropdown"` 
   },
   {
     "type": "dropdown",
-    "label": "Quick Links",
-    "iconUrl": "http://bookmarks.applebaum.treehouse/icons/quicklinks.png",
+    "label": "Dev Links",
+    "iconUrl": "http://bookmarks.applebaum.treehouse/icons/management.png",
     "options": [
-      { "label": "YouTube", "value": "https://youtube.com" },
-      { "label": "GitHub", "value": "https://github.com" },
-      { "label": "Docs", "value": "https://docs.applebaum.treehouse" }
+      {
+        "label": "YouTube",
+        "value": "https://youtube.com",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/video@16x.png"
+      },
+      {
+        "label": "GitHub",
+        "value": "https://github.com/Electric-Bluefish-Productions-Inc",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@16x.png"
+      },
+      {
+        "label": "Docs",
+        "value": "https://docs.applebaum.treehouse"
+        // No iconUrl: will use default icon
+      }
     ]
-  },
-  {
-    "label": "GitHub",
-    "iconUrl": "https://github.githubassets.com/favicons/favicon.svg",
-    "url": "https://github.com"
   }
 ]
 ```
@@ -119,23 +100,4 @@ To create a dropdown in the bookmark bar, add an object with `type: "dropdown"` 
 
 ## Firefox Compatibility
 
-To support Firefox, add browser-polyfill.js as a web accessible resource and include it in your content scripts.
-
-- Download from: https://github.com/mozilla/webextension-polyfill
-- Use the file: dist/browser-polyfill.js
-- Place browser-polyfill.js in your extension directory (same level as manifest.json).
-- Add to manifest.json:
-    - "web_accessible_resources": [
-      ...existing resources...,
-      "browser-polyfill.js"
-      ]
-      ...
-      "content_scripts": [
-      {
-      ...existing fields...,
-      "js": ["browser-polyfill.js", "content.js"]
-      }
-      ]
--
-
-This ensures browser.* API is available in all browsers.
+To support Firefox, we added browser-polyfill.js as a web accessible resource and included it in your content scripts.
