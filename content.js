@@ -308,8 +308,7 @@ border-radius: 4px;
   margin-right: 6px;
 }
 .dropdown-option-label {
-  font-size: 12px;
-  color: #222;
+  color: #000;
   white-space: nowrap;
 }
 `;
