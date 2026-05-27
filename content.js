@@ -192,7 +192,7 @@ class BookmarkBar {
   align-items: center;
   background: #e3e3e3;
   background-repeat: no-repeat;
-  min-height: 25px;
+  min-height: 30px;
   width: 100vw;
   box-sizing: border-box;
   padding: 0px;
