@@ -1,8 +1,18 @@
 [
   {
-    "label": "Fileshare",
-    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/fileshare@16x.png",
+    "label": "External File Share",
+    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/fileshare@32x.png",
     "url": "https://bluefishclients.avalonbloom.com/"
+  },
+  {
+    "label": "Food Inventory",
+    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/menu@32x.png",
+    "url": "https://menu.avalonbloom.com/stockoverview"
+  },
+  {
+    "label": "Messaging",
+    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/clipboard@32x.png",
+    "url": "https://message.applebaum.treehouse/"
   },
   {
     "type": "dropdown",
