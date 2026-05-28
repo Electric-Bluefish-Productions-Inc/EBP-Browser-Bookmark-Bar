@@ -35,5 +35,5 @@ window.CONFIG = {
     bookmarksUrl: 'https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/bookmarks.json',
     logoPath: 'icons/logo32.png',
     bgPath: 'icons/bluefish-aquarium_background-25px.jpg',
-    homeUrl: 'https://bookmarks.applebaum.treehouse/' // Home button URL
+    homeUrl: 'https://ourfishbowl.avalonbloom.com/' // Home button URL
 };
