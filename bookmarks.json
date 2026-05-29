@@ -26,6 +26,21 @@
         "value": "http://laserscanner.applebaum.treehouse/"
       },
       {
+        "label": "CRM System",
+        "value": "https://ourfishbowl.applebaum.treehouse/",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/store@32x.png"
+      },
+      {
+        "label": "Matomo Analytics",
+        "value": "https://matomo.applebaum.treehouse/",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/store@32x.png"
+      },
+      {
+        "label": "ERPNext ERP System",
+        "value": "https://erpnext.applebaum.treehouse/",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/store@32x.png"
+      },
+      {
         "label": "Messaging",
         "value": "https://message.applebaum.treehouse",
         "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/clipboard@32x.png"
