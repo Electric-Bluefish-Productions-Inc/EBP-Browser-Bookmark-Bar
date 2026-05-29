@@ -33,12 +33,17 @@
       {
         "label": "Matomo Analytics",
         "value": "https://matomo.applebaum.treehouse/",
-        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/store@32x.png"
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/info@32x.png"
       },
       {
         "label": "ERPNext ERP System",
         "value": "https://erpnext.applebaum.treehouse/",
         "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/store@32x.png"
+      },
+      {
+        "label": "Middleware Intigration Server",
+        "value": "https://middleware.applebaum.treehouse/",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/link@32x.png"
       },
       {
         "label": "Messaging",
