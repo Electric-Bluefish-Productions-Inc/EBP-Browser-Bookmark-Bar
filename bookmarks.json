@@ -72,16 +72,6 @@
         "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@32x.png"
       },
       {
-        "label": "Host Server Functional Documentation",
-        "value": "https://github.com/Electric-Bluefish-Productions-Inc/Treehouse-Server-functional-cheats",
-        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@32x.png"
-      },
-      {
-        "label": "Host Server Custom Scripts",
-        "value": "https://github.com/Electric-Bluefish-Productions-Inc/Treehouse-Server-Root-scripts",
-        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@32x.png"
-      },
-      {
         "label": "Host Server Default Website",
         "value": "https://github.com/Electric-Bluefish-Productions-Inc/Treehouse-Default-Webserver",
         "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@32x.png"
@@ -119,6 +109,38 @@
         "label": "Extension Bookmarks",
         "value": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/bookmarks.json",
         "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/git@32x.png"
+      }
+    ]
+  },
+  {
+    "type": "dropdown",
+    "label": "Documentations | Help",
+    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/management@16x.png",
+    "options": [
+      {
+        "label": "Host Server Functional Documentation",
+        "value": "https://github.com/Electric-Bluefish-Productions-Inc/Treehouse-Server-functional-cheats",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/tech_support@32x.png"
+      },
+      {
+        "label": "Host Server Custom Scripts",
+        "value": "https://github.com/Electric-Bluefish-Productions-Inc/Treehouse-Server-Root-scripts",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/tech_support@32x.png"
+      },
+      {
+        "label": "ERPNext Manual",
+        "value": "https://docs.frappe.io/erpnext/introduction",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/tech_support@32x.png"
+      },
+      {
+        "label": "Twenty Manual",
+        "value": "https://docs.twenty.com/getting-started/core-concepts/layout",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/tech_support@32x.png"
+      },
+      {
+        "label": "Twenty github docs",
+        "value": "https://github.com/twentyhq/twenty",
+        "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/tech_support@32x.png"
       }
     ]
   }
