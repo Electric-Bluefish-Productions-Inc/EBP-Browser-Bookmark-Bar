@@ -115,7 +115,7 @@
   {
     "type": "dropdown",
     "label": "Documentations | Help",
-    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/management@16x.png",
+    "iconUrl": "https://bookmarks.applebaum.treehouse/EBP-Browser-Bookmark-Bar/icons/info@32x.png",
     "options": [
       {
         "label": "Host Server Functional Documentation",
